@@ -20,7 +20,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -69,7 +68,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](public\Images\gif.gif)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/Moe-Ara/Fullstack-web-app/blob/master/public/Images/gif.gif)
 
 This Project is built for the purpose of learning a bit about modern web developement using react.
 It is for Educational Purpose only and should not be used commercially since it can contain several bugs. 
@@ -181,4 +180,4 @@ Project Link: [https://github.com/Moe-Ara/Fullstack-web-app/](https://github.com
 [issues-url]: https://github.com/Moe-Ara/Fullstack-web-app/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/mohamad-arabi-a91773215/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: https://github.com/Moe-Ara/Fullstack-web-app/blob/master/public/Images/gif.gif
