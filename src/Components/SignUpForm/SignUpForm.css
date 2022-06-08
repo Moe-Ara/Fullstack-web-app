@@ -1,0 +1,84 @@
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+  }
+:root {
+    background-color: rgb(33, 1, 33);
+}
+/* -----------Form Section--------- */
+.signUp-from{
+    display: flexbox;
+    position: relative;
+    border-radius: 15px;
+    padding:50px 75px 50px 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 23%;
+    min-height: 700px;
+    left: 40%;
+    top:10rem;
+}
+/* ? Register Button inside the form */
+.signUp-from .btn{
+    margin-top: 25%;
+    margin-left: 20%;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 200px;
+} 
+/* ? Checkbox inside the form */
+.checkbox-container{
+    margin-top: 10%;
+    font-size: 20px;
+}
+.checkbox-container #checkbox{
+    width: 25px;
+    height: 15px;
+    
+}
+.checkbox-container #checkbox:hover{
+    cursor: pointer;
+}
+.checkbox-container >label{
+    color: #fff;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+/* -------Devider Section-------- */
+.devider{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color:#fff;
+    font-size: 30px;
+    margin-top: 25px;
+}
+.devider::after, .devider::before{
+    content: '';
+    border :1px solid white;
+    flex: 1;
+
+}
+.devider p{
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    font-family: 'Satisfy', cursive;
+}
+
+/* ---------icons Section------- */
+.SignUp-With-icons{
+    text-align: center;
+    display: flex;
+    flex: 1;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-top: 15px;
+    
+}
+.SignUp-With-icons .icon{
+    margin-right: 20px;
+    margin-left: 25px;
+}

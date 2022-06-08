@@ -1,0 +1,93 @@
+.LoginForm_container {
+    min-height: 100%;
+
+}
+
+.LoginForm {
+    z-index: 10000;
+    height: 400px;
+    background-color: gray;
+    width: 30%;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    bottom: 1px;
+    right: 35%;
+    background-color: rgba(0, 0, 0, 1);
+    transform: translateY(100%);
+    transition: transform 500ms, opacity 500ms;
+}
+
+.LoginForm .btn {
+    margin-top: 40px;
+}
+
+.LoginForm>h1 {
+    /* float: right; */
+    color: white;
+    font-size: 55px;
+    margin: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 50px;
+}
+
+.LoginForm .txtfld {
+    width: 75%;
+    align-self: center;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+
+.LoginForm.active {
+    display: block;
+    transform: translateY(-70%);
+    transition: transform 500ms, opacity 500ms;
+}
+
+.LoginForm.active.close {
+    transform: translateY(100%);
+}
+
+.LoginForm.close {
+    transform: translateY(100%);
+}
+
+.LoginForm>i {
+    color: white;
+    position: fixed;
+    right: 20px;
+    width: 30px;
+    font-size: 23px;
+
+}
+
+.LoginForm>i:hover {
+    cursor: pointer;
+}
+
+.LoginForm>i:active {
+    transform: translateY(10%);
+    transition: transform 500ms, opacity 500ms;
+
+}
+
+@media screen and (min-width: 971px) and (max-width: 1680px) {
+    .LoginForm .btn {
+        margin-top: 20px;
+    }
+    .LoginForm>h1{
+        font-size: 40px;
+        
+    }
+
+
+}
+@media screen and (max-width: 970px) {
+    .LoginForm {
+        display: none;
+        position: fixed;
+        opacity: 0;
+    }
+
+}

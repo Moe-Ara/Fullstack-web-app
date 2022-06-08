@@ -1,0 +1,37 @@
+.widgets_div {
+    display: flex;
+	border-bottom: 2px black solid;
+	padding: 15px 20px 5px 0;
+}
+
+.widgets_div .icon_div {
+	/* display: inline-block; */
+	margin-left: 15px;
+    margin-right: 30px;
+    width: 30px;
+}
+
+.widgets_div .icon_div span i {
+	font-size: 40px;
+}
+.icon_div > span {
+  display:table;
+    
+}
+.widgets_div .text_div {
+	display: flex;
+    float: right;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.widgets_div .text_div span {
+	color: #58666e;
+	font-size: 20px;
+
+}
+
+.widgets_div .text_div span + span {
+	color: #747F85;
+	font-size: 11px;
+}
