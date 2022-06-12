@@ -1,8 +1,4 @@
 <div id="top"></div>
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -15,7 +11,7 @@
   <h3 align="center">Full-stack web app using react and flask</h3>
 
   <p align="center">
-    A project for educational purposes
+    A project for educational purposes. (Still in developement and might contain several bugs)
     <br />
   </p>
 </div>
