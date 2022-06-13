@@ -85,9 +85,12 @@
 }
 @media screen and (max-width: 970px) {
     .LoginForm {
-        display: none;
-        position: fixed;
-        opacity: 0;
+        display: inline-block;
+        height: fit-content;
+    }
+    .LoginForm>h1{
+        font-size: 20px;
+        
     }
 
 }

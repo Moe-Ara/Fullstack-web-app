@@ -13,15 +13,16 @@ video {
     border-radius: 15px;
     padding:50px 75px 50px 50px;
     background-color: rgba(0, 0, 0, 0.7);
-    width: 23%;
+    width: 30%;
     min-height: 700px;
-    left: 40%;
+    left: 35%;
     top:10rem;
+    min-width: 200px;
 }
 /* ? Register Button inside the form */
 .signUp-from .btn{
     margin-top: 25%;
-    margin-left: 20%;
+    margin-left: 30%;
     padding-left: 50px;
     padding-right: 50px;
     width: 200px;
@@ -74,19 +75,42 @@ video {
     padding-left: 20px;
     padding-top: 10px;
     margin-top: 15px;
-    
+    justify-content: center;
 }
 .SignUp-With-icons .icon{
     margin-right: 20px;
     margin-left: 25px;
 }
-@media screen and (max-width: 1680px){
-    .signUp-from{
+@media screen and (max-width: 1500px){
+    .SignUp-With-icons{
+        display: flex;
+        justify-content: center;
+        margin-left: -30px;
+        flex-direction: column;
+        flex: 1;
+        
+    }
+}
+@media screen and (max-width: 1380px){
+
+    .signUp-from .btn{
+        padding: 12px;
+        font-size: medium;
+        width: 150px;
+    } 
+
+}
+@media screen and (max-width: 980px){
+    /* .signUp-from{
         width: 50%;
         left: 25%;
         padding:50px 75px 50px 75px;
-    }
-    
+    } */
+    .signUp-from .btn{
+        padding: 12px;
+        font-size: small;
+        width: 100px;
+    } 
 }
 @media screen and (max-width: 720px){
 
