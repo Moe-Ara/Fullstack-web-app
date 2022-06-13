@@ -46,7 +46,9 @@
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://github.com/Moe-Ara/Fullstack-web-app/blob/master/public/Images/gif.gif)
+<br />
 
+[![ReactivityScreenShot][product-screenshot2]](https://github.com/Moe-Ara/Fullstack-web-app/blob/master/public/Images/reactivity.gif)
 This Project is built for the purpose of learning a bit about modern web developement using react.
 It is for Educational Purpose only and should not be used commercially since it can contain several bugs. 
 
