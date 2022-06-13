@@ -5,9 +5,7 @@ video {
     position: fixed;
     z-index: -1;
   }
-:root {
-    background-color: rgb(33, 1, 33);
-}
+
 /* -----------Form Section--------- */
 .signUp-from{
     display: flexbox;
@@ -81,4 +79,29 @@ video {
 .SignUp-With-icons .icon{
     margin-right: 20px;
     margin-left: 25px;
+}
+@media screen and (max-width: 1680px){
+    .signUp-from{
+        width: 50%;
+        left: 25%;
+        padding:50px 75px 50px 75px;
+    }
+    
+}
+@media screen and (max-width: 720px){
+
+    .SignUp-With-icons{
+        display: flex;
+        justify-content: center;
+        margin-left: -30px;
+        flex-direction: column;
+        flex: 1;
+        
+    }
+}
+@media screen and (max-height: 1780px)and (max-width: 1680px){
+    .signUp-from{
+        top: 20rem
+    }
+    
 }

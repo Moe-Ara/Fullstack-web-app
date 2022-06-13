@@ -91,3 +91,12 @@
     }
 
 }
+@media screen and (max-height: 1780px) and (max-width: 1680px){
+    .LoginForm.active {
+        width: 40%;
+        padding: 20px;
+        bottom: 20%;
+        right: 30%;
+    }
+    
+}

@@ -32,7 +32,7 @@ const LogInForm = ({
             forDat.append('email', creds.uname);
             forDat.append('password', creds.passwd);
             
-            fetch("/login", { method: 'POST',
+            fetch("/authentication", { method: 'POST',
             header:{
               'Content-Type':'multipart/form-data'
             },
@@ -41,7 +41,7 @@ const LogInForm = ({
              })
              .then(response =>response.json())
              .catch(error=>console.log)
-      
+             console.log(Response)
         };
     };
     return (

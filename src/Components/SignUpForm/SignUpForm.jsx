@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import  { BrowserRouter,Navigate,Route, useNavigate} from 'react-router-dom'
+import Home from '../../pages/Home/Home';
+import Profile from '../../pages/Profile/Profile';
 import { Button } from '../../Reusables/Button/Button'
 import { Icon } from '../../Reusables/Icon/Icon';
 import { Textfield } from '../../Reusables/Textfield/Textfield';
@@ -43,7 +46,14 @@ const SignUpForm = () => {
        body:forDat,
 
        })
-       .then(response =>response.json())
+       .then((response) =>{
+        const res= response.data
+        setCreds({
+          uname:res.name,
+          email:res.email,
+        });
+
+       })
        .catch(error=>console.log)
 
   };
