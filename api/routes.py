@@ -9,22 +9,25 @@ from flask_jwt_extended import JWTManager
 from __initFirebase__ import auth, firebase, db
 
 
-app=Flask(__name__)
+app = Flask(__name__)
 # Setup the Flask-JWT-Extended extension
-app.config["JWT_SECRET_KEY"] = "super-secret"  # Change this!
-jwt = JWTManager(app)
-#initialize firebase
+# app.config["JWT_SECRET_KEY"] = "super-secret"  # Change this!
+# jwt = JWTManager(app)
+# initialize firebase
+
 
 @app.route("/", methods=["GET"])
 def welcome():
-    return redirect("http://localhost:3000/", code=302)
+    return redirect("http://localhost:3000")
+
 
 def create_token(seed):
     try:
-        access_token= create_access_token(identity=seed)
-        return jsonify({'Access token':access_token}), 200
+        access_token = create_access_token(identity=seed)
+        return jsonify({"Access token": access_token}), 200
     except:
-        return jsonify({'msg':'Error. Token creation failed'}), 500
+        return jsonify({"msg": "Error. Token creation failed"}), 500
+
 
 # @app.route('/login', methods=['POST'])
 # def login():
@@ -34,6 +37,7 @@ def create_token(seed):
 #         return jsonify({"msg":"Bad username or password"}),401
 #     return create_token(username)
 
+
 @app.route("/protected", methods=["GET"])
 @jwt_required()
 def protected():
@@ -42,62 +46,66 @@ def protected():
     return jsonify(logged_in_as=current_user), 200
 
 
-#Initialze person as dictionary
+# Initialze person as dictionary
 person = {"is_logged_in": False, "name": "", "email": "", "uid": ""}
-#~ SUGIN UP SECTION
-@app.route("/register", methods=['POST', 'GET'])
+# ~ SUGIN UP SECTION
+@app.route("/register", methods=["POST", "GET"])
 def signUp():
-    if request.method=='POST':
-        uname= request.form.get('username')
-        email=request.form.get('email')
-        password=request.form.get('password')
-        passwordConfirmation= request.form.get('passwordConfirmation')
+    if request.method == "POST":
+        uname = request.form.get("username")
+        email = request.form.get("email")
+        password = request.form.get("password")
+        passwordConfirmation = request.form.get("passwordConfirmation")
         try:
             auth.create_user_with_email_and_password(email, password)
             user = auth.sign_in_with_email_and_password(email, password)
             global person
-            person["is_logged_in"]=True
-            person["email"]=user["email"]
-            person["uid"]=user["localId"]
-            person["name"]=uname
-            #uploading user to database
-            data={"name":uname, "email": email}
+            person["is_logged_in"] = True
+            person["email"] = user["email"]
+            person["uid"] = user["localId"]
+            person["name"] = uname
+            # uploading user to database
+            data = {"name": uname, "email": email}
             db.child("user").child(person["uid"]).set(data)
-            return redirect("http://localhost:3000/profile", code=302)
+            return jsonify(person), 200
         except:
-            return redirect("http://localhost:3000/signup", code=302)
+            return jsonify(person), 200
     else:
         if person["is_logged_in"] == True:
-            return '',200
+            return "", 200
             # return redirect("http://localhost:3000/profile", code=302)
         else:
             return redirect("http://localhost:3000/signup", code=302)
 
-#~ LOGIN UP SECTION
-@app.route("/login", methods=['POST', 'GET'])
-def logIn():
-    if request.method =='POST':
-        email=request.form.get('email')
-        password=request.form.get('password')
-        try:
-            user=auth.sign_in_with_email_and_password(email, password)
-            global person
-            person["is_logged_in"]=True
-            person["email"]=user["email"]
-            person["uid"]=user["localId"]
 
-            data=db.child("user").get()
-            person["name"]= data.val()[person["uid"]]["name"]
-            return redirect("http://localhost:3000/profile", code=302)
+# ~ LOGIN UP SECTION
+@app.route("/authentication", methods=["POST"])
+def logIn():
+    if request.method == "POST":
+        email = request.form.get("email")
+        password = request.form.get("password")
+        try:
+            user = auth.sign_in_with_email_and_password(email, password)
+            global person
+            person["is_logged_in"] = True
+            person["email"] = user["email"]
+            person["uid"] = user["localId"]
+
+            data = db.child("user").get()
+            person["name"] = data.val()[person["uid"]]["name"]
+            return jsonify(person), 200
         except:
             return redirect("http://localhost:3000/profile", code=302)
     else:
         if person["is_logged_in"] == True:
-            return  redirect("http://localhost:3000/profile", code=302)
+            return render_template("profile.html")
+            # return  redirect("http://localhost:3000/profile", code=302)
         else:
-            return  redirect("http://localhost:3000/profile", code=302)
-#~ SUGIN OUT SECTION
-@app.route("/signout", methods=['POST', 'GET'])
+            return redirect("http://localhost:3000/profile", code=302)
+
+
+# ~ SUGIN OUT SECTION
+@app.route("/signout", methods=["POST", "GET"])
 def signOut():
-    auth.current_user=None
+    auth.current_user = None
     return redirect("http://localhost:3000/", code=302)
