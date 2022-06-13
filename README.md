@@ -52,13 +52,12 @@ It is for Educational Purpose only and should not be used commercially since it 
 Here's why:
 * Learn front-end developement with react
 * Learn back-end developement flask
+
 ### Main Demo
 [![Product Name Screen Shot][product-screenshot]](https://github.com/Moe-Ara/Fullstack-web-app/blob/master/public/Images/gif.gif)
 <br />
-
 ### Reactivity
 [![Reactivity Screen Shot][product-screenshot2]](https://github.com/Moe-Ara/Fullstack-web-app/blob/master/public/Images/reactivity.gif)
-<br />
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
