@@ -45,17 +45,20 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/Moe-Ara/Fullstack-web-app/blob/master/public/Images/gif.gif)
-<br />
 
-[![Reactivity Screen Shot][product-screenshot2]](https://github.com/Moe-Ara/Fullstack-web-app/blob/master/public/Images/reactivity.gif)
 This Project is built for the purpose of learning a bit about modern web developement using react.
 It is for Educational Purpose only and should not be used commercially since it can contain several bugs. 
 
 Here's why:
 * Learn front-end developement with react
 * Learn back-end developement flask
+### Main Demo
+[![Product Name Screen Shot][product-screenshot]](https://github.com/Moe-Ara/Fullstack-web-app/blob/master/public/Images/gif.gif)
+<br />
 
+### Reactivity
+[![Reactivity Screen Shot][product-screenshot2]](https://github.com/Moe-Ara/Fullstack-web-app/blob/master/public/Images/reactivity.gif)
+<br />
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -160,4 +163,4 @@ Project Link: [https://github.com/Moe-Ara/Fullstack-web-app/](https://github.com
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/mohamad-arabi-a91773215/
 [product-screenshot]: https://github.com/Moe-Ara/Fullstack-web-app/blob/master/public/Images/gif.gif
-[product-screenshot2]: https://github.com/Moe-Ara/Fullstack-web-app/blob/master/public/Images/gif.gif
+[product-screenshot2]: https://github.com/Moe-Ara/Fullstack-web-app/blob/master/public/Images/reactivity.gif
